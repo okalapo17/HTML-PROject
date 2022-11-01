@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;0,900;1,600;1,900&display=swap');
+
+body{
+	margin:0;
+	line-height: 1.5;
+	
+}
+body,
+input,
+textarea,
+button{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+*{
+	box-sizing: border-box;
+	margin:0;	
+}
+
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.align-items-center{
+	align-items: center;
+}
+
+.justify-content-between{
+	justify-content: space-between;
+}
+
+
+
+/* Header*/
+.header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+.header .brand-name{
+	/* background-color: red; */
+	padding: 0 15px;
+
+
+}
+
+.header .brand-name a{
+	text-decoration: none;
+	font-size: 30px;
+	font-weight: 900;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.header .nav{
+	/*background-color: gray; */
+	padding: 0 15px;
+
+}
+
+.header .nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.header .nav ul li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	padding: 25px 0;
+	display: block;
+	transition: all 0.5s ease;
+}
+
+.header .nav ul li a:hover{
+	color:#ff9800;
+}
+
+
+/* Home Section */
+
+.home-section{
+	min-height:100vh;
+	background-image: url('../image/jisoo.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+}
+
+.home-section:before{
+	content: '';
+	position: absolute;
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	z-index: -1;
+}
+
+.home-section .shape-01{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	border: 2px solid #ff9800;
+	right: 5%;
+	top: 20%;
+	animation: ani01 5s linear infinite;
+}
+
+.home-section .row{
+	min-height: 100vh;
+}
+
+.home-section .home-content{
+/*	background-color: red; */
+	flex: 0 0 100%;
+	max-width: 100%;
+	text-align: center;
+}
+
+.home-section .home-content h4{
+	font-size: 20px;
+	color: #ffffff;
+	margin: 0;
+}
+
+.home-section .home-content h1{
+	font-size: 60px;
+	margin: 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 10px;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #107a39 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.back-video{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: -1;
+	width: 100%;
+	height: auto;
+
+}
+
+@media (min-aspect-ratio: 16/9){
+	.back-video{
+		width: 100%;
+		height: auto;
+	}
+
+}
+
+@media (max-aspect-ratio: 16/9){
+	.back-video{
+		width: auto;
+		height: 100%;
+	}
+
+}
